@@ -18,6 +18,7 @@ public class ScoringSystem : MonoBehaviour
 {
 
     public static int Points = 0;
+    public static int strk = 0;
     Text score;
     // Start is called before the first frame update
     void Start()
@@ -28,6 +29,34 @@ public class ScoringSystem : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        strk = QuestionsCorrect.Streak;
         score.text = Points.ToString();
+    }
+    public static void Correct()
+    {
+        if (strk <= 5)
+        {
+            Points += 1000;
+        }
+        else if (strk > 5)
+        {
+            Points += 2000;
+        }
+        else if (strk > 10) 
+        {
+            Points += 4000;
+        }
+        else if (strk > 20)
+        {
+            Points += 8000;
+        }
+        QuestionsCorrect.Correct += 1;
+        QuestionsCorrect.Streak += 1;
+    }
+
+    public static void Incorrect()
+    {
+        Points -= 1000;
+        QuestionsCorrect.Streak = 0;
     }
 }
