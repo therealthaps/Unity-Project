@@ -723,6 +723,27 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 530935469}
   m_CullTransparentMesh: 0
+--- !u!1 &575887913 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3648466460507596804, guid: a9e9a2d4c3a0948c3a320db77d228b9c,
+    type: 3}
+  m_PrefabInstance: {fileID: 4518066106883300914}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &575887915
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 575887913}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5abec1b9c839264ea9f44e14b258a27, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
+  deathEffect: {fileID: 3192092712113059123, guid: 2b3759f83cb3b8547893dcf653e4f0db,
+    type: 3}
 --- !u!1001 &580385237
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -836,6 +857,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 7313023362511651742, guid: a6b4975193e4d4139b7dc37f253e5c00,
+        type: 3}
+      propertyPath: deathEffect
+      value: 
+      objectReference: {fileID: 3192092712113059123, guid: 2b3759f83cb3b8547893dcf653e4f0db,
+        type: 3}
     - target: {fileID: 8314017400678023171, guid: a6b4975193e4d4139b7dc37f253e5c00,
         type: 3}
       propertyPath: m_CollisionDetection
@@ -1066,6 +1093,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 7313023362511651742, guid: a6b4975193e4d4139b7dc37f253e5c00,
+        type: 3}
+      propertyPath: deathEffect
+      value: 
+      objectReference: {fileID: 3192092712113059123, guid: 2b3759f83cb3b8547893dcf653e4f0db,
+        type: 3}
     - target: {fileID: 8314017400678023171, guid: a6b4975193e4d4139b7dc37f253e5c00,
         type: 3}
       propertyPath: m_CollisionDetection
@@ -2392,6 +2425,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3648466460507596804, guid: a9e9a2d4c3a0948c3a320db77d228b9c,
+        type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     - target: {fileID: 4518066106868569932, guid: a9e9a2d4c3a0948c3a320db77d228b9c,
         type: 3}
       propertyPath: m_RootOrder
@@ -2452,7 +2490,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: GamePlay Elements
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 7107716779252777555, guid: a9e9a2d4c3a0948c3a320db77d228b9c,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7107716779252777555, guid: a9e9a2d4c3a0948c3a320db77d228b9c,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 3
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 4518066106514173103, guid: a9e9a2d4c3a0948c3a320db77d228b9c, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: a9e9a2d4c3a0948c3a320db77d228b9c, type: 3}
 --- !u!1001 &5469187209821517575
 PrefabInstance:
@@ -2521,6 +2570,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy
       objectReference: {fileID: 0}
+    - target: {fileID: 3358384371189195309, guid: d83fb4f0fa057401590f04f582c7eacd,
+        type: 3}
+      propertyPath: deathEffect
+      value: 
+      objectReference: {fileID: 3192092712113059123, guid: 2b3759f83cb3b8547893dcf653e4f0db,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d83fb4f0fa057401590f04f582c7eacd, type: 3}
 --- !u!1001 &5598829150908023659
