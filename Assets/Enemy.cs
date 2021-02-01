@@ -6,7 +6,8 @@ public class Enemy : MonoBehaviour
 {
     [SerializeField]
     private float speed= 0.1f;
-    
+    private int damage = 100;
+    public GameObject deathEffect;
 
     // Start is called before the first frame update
     void Start()
@@ -35,8 +36,11 @@ public class Enemy : MonoBehaviour
             if (other.tag == "bullet") {
                 Destroy(other.gameObject);
                 Debug.Log("Hit2");
-                Destroy(this.gameObject);
-
+            damage -= 50;
+            if (damage <= 0)
+            {
+                Die();
+            }
             }
             if (other.tag == "PLayer") {
                 GameControlScript.health -= 1;
@@ -55,6 +59,10 @@ public class Enemy : MonoBehaviour
 
 
         }
+    void Die()
+    {
+        Instantiate(deathEffect, transform.position, Quaternion.identity);
+        Destroy(this.gameObject);
+    }
 
-    
 }
