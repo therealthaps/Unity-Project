@@ -52,11 +52,13 @@ public class ScoringSystem : MonoBehaviour
         }
         QuestionsCorrect.Correct += 1;
         QuestionsCorrect.Streak += 1;
+        QuestionsCorrect.Answered += 1;
     }
 
     public static void Incorrect()
     {
         Points -= 1000;
         QuestionsCorrect.Streak = 0;
+        QuestionsCorrect.Answered += 1;
     }
 }

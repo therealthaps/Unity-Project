@@ -7,6 +7,7 @@ public class QuestionsCorrect : MonoBehaviour
 {
     public static int Correct = 0;
     public static int Streak = 0;
+    public static int Answered = 0;
     Text count;
     // Start is called before the first frame update
     void Start()
@@ -17,6 +18,6 @@ public class QuestionsCorrect : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        count.text = Correct.ToString();
+        count.text = Answered.ToString();
     }
 }
