@@ -23,6 +23,18 @@ public class Bullet : MonoBehaviour
             enemy.TakeDamage(damage);
         }
 
+        AnswerScript answer = hitInfo.GetComponent<AnswerScript>();
+        if (answer != null)
+        {
+            answer.TakeDamage(damage);
+        }
+
+        IncorrectAnswerScript IncorrectAnswer = hitInfo.GetComponent<IncorrectAnswerScript>();
+        if (IncorrectAnswer != null)
+        {
+            IncorrectAnswer.TakeDamage(damage);
+        }
+
         Instantiate(impactEffect, transform.position, transform.rotation);
 
         Destroy(gameObject);
