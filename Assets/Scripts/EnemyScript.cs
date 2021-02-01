@@ -15,6 +15,8 @@ public class EnemyScript : MonoBehaviour
         if (health <= 0)
         {
             Die();
+            ScoringSystem.EnemyKilled();
+
         }
     }
 

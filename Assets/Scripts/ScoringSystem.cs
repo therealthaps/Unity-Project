@@ -19,6 +19,7 @@ public class ScoringSystem : MonoBehaviour
 
     public static int Points = 0;
     public static int strk = 0;
+    
     Text score;
     // Start is called before the first frame update
     void Start()
@@ -58,5 +59,10 @@ public class ScoringSystem : MonoBehaviour
     {
         Points -= 1000;
         QuestionsCorrect.Streak = 0;
+    }
+
+    public static void EnemyKilled()
+    {
+        Points += 500;
     }
 }
