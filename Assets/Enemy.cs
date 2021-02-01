@@ -21,7 +21,7 @@ public class Enemy : MonoBehaviour
         if (Time.timeScale != 0) 
             transform.Translate(new Vector3(0, -1, 0) * speed * Time.deltaTime);
 
-            if (transform.position.y < -1.9f) {
+            if (transform.position.y < -3.0f) {
                 float randomX = Random.Range(-7.79f, 2.16f);
                 transform.position = new Vector3(randomX, 2.5f, 0);
             }
@@ -32,7 +32,7 @@ public class Enemy : MonoBehaviour
         private void OnTriggerEnter2D(Collider2D other) {
 
 
-            if (other.tag == "Laser") {
+            if (other.tag == "bullet") {
                 Destroy(other.gameObject);
                 Debug.Log("Hit2");
                 Destroy(this.gameObject);

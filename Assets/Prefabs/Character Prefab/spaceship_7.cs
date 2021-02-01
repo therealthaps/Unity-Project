@@ -2,37 +2,38 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player_sprite: MonoBehaviour
+public class spaceship_7 : MonoBehaviour
 {
     [SerializeField]// to control value through the inspector
     private float speed = 7f;
     public float horizontalInput;
     public float verticalInput;
     
-    
+    [SerializeField]
+    private float _fire = 0.25f;
+    private float _canfire = -1f;
     [SerializeField]
     private int lives = 3;
-    
+
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        CalculateMovement();
         
 
     }
     void CalculateMovement()
     {
-        
+        float verticalInput = Input.GetAxis("Vertical");
         float horizontalInput = Input.GetAxis("Horizontal");
-        transform.position += new Vector3(horizontalInput, 0, 0) * Time.deltaTime * speed;
 
-        
+        transform.Translate(new Vector3(verticalInput, horizontalInput, 0) * speed * Time.deltaTime);
+
         // if player position on y is greater than 0
         //y position=0
         // else if position on y is less than -3.8f

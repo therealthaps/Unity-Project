@@ -15,6 +15,8 @@ public class Bullet : MonoBehaviour
 
     void OnTriggerEnter2D (Collider2D hitInfo)
     {
+        transform.Translate(new Vector3(0, 1, 0) * speed * Time.deltaTime);
+         
         EnemyScript enemy = hitInfo.GetComponent<EnemyScript>();
         if (enemy != null)
         {
