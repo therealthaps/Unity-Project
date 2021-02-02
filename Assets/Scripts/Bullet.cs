@@ -15,10 +15,24 @@ public class Bullet : MonoBehaviour
 
     void OnTriggerEnter2D (Collider2D hitInfo)
     {
+        transform.Translate(new Vector3(0, 1, 0) * speed * Time.deltaTime);
+         
         EnemyScript enemy = hitInfo.GetComponent<EnemyScript>();
         if (enemy != null)
         {
             enemy.TakeDamage(damage);
+        }
+
+        AnswerScript answer = hitInfo.GetComponent<AnswerScript>();
+        if (answer != null)
+        {
+            answer.TakeDamage(damage);
+        }
+
+        IncorrectAnswerScript IncorrectAnswer = hitInfo.GetComponent<IncorrectAnswerScript>();
+        if (IncorrectAnswer != null)
+        {
+            IncorrectAnswer.TakeDamage(damage);
         }
 
         Instantiate(impactEffect, transform.position, transform.rotation);
