@@ -48,6 +48,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0.5
+  deathEffect: {fileID: 0}
 --- !u!212 &4640395830471103842
 SpriteRenderer:
   m_ObjectHideFlags: 0

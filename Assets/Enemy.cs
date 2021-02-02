@@ -40,6 +40,7 @@ public class Enemy : MonoBehaviour
             if (damage <= 0)
             {
                 Die();
+                ScoringSystem.EnemyKilled();
             }
             }
             if (other.tag == "PLayer") {
