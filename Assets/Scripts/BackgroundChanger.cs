@@ -13,19 +13,24 @@ public class BackgroundChanger : MonoBehaviour
     public float delay = 0;
     public SpriteRenderer spriteRenderer;
     public Sprite[] spriteArray;
+    private int imgnum = 0;
+
 
     void ChangeSprite()
     {
-        spriteRenderer.sprite = spriteArray[(int)Random.Range((float)0.0, spriteArray.Length)];
+        imgnum = (int)Random.Range((float)0.0, spriteArray.Length);
+        spriteRenderer.sprite = spriteArray[imgnum];
     }
     void ChangeSprite(int img)
     {
+        imgnum = img;
         spriteRenderer.sprite = spriteArray[img];
     }
     // Start is called before the first frame update
     void Start()
     {
         spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
+        imgnum = spriteArray.Length - 1;
     }
 
     // Update is called once per frame
@@ -34,7 +39,21 @@ public class BackgroundChanger : MonoBehaviour
         seconds = Time.time - t;
         if (seconds >= delay && delay != 0)
         {
-            ChangeSprite();
+            if (delay != .5)
+            {
+                ChangeSprite();
+            }
+            else
+            {
+                if (imgnum != spriteArray.Length -1)
+                {
+                    ChangeSprite(imgnum + 1);
+                }
+                else
+                {
+                    ChangeSprite(0);
+                }
+            }
             t = Time.time;
             seconds = 0;
         }
@@ -42,15 +61,19 @@ public class BackgroundChanger : MonoBehaviour
         {
             if (QuestionsCorrect.Answered >= 29)
             {
-                ChangeSprite(0);
+                ChangeSprite(2);
+                imgnum = 2;
+ 
             }
             else if (QuestionsCorrect.Answered >= 19)
             {
                 ChangeSprite(1);
+                imgnum = 1;
             }
             else if (QuestionsCorrect.Correct >= 9)
             {
-                ChangeSprite(2);
+                ChangeSprite(0);
+                imgnum = 0;
             }
         }
     }
