@@ -1960,10 +1960,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4323082816345005214, guid: 5ad6d47988bf25e4f95addfd1493594e,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 4507935469564157487, guid: 5ad6d47988bf25e4f95addfd1493594e,
         type: 3}
       propertyPath: m_Name
       value: Gameplay window
+      objectReference: {fileID: 0}
+    - target: {fileID: 8874916957285575248, guid: 5ad6d47988bf25e4f95addfd1493594e,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5ad6d47988bf25e4f95addfd1493594e, type: 3}
