@@ -43,9 +43,18 @@ public class GameManager : MonoBehaviour
 
     public void correct()
     {
+        ScoringSystem.Correct();
         QnA.RemoveAt(currentQuestion);
         generateQuestion();
     }
+
+    public void inCorrect()
+    {
+        ScoringSystem.Incorrect();
+        QnA.RemoveAt(currentQuestion);
+        generateQuestion();
+    }
+
 
     void SetAnswers()
     {
@@ -63,7 +72,7 @@ public class GameManager : MonoBehaviour
 
     void generateQuestion()
     {
-        currentQuestion = 0;
+        currentQuestion = Random.Range(0, QnA.Count);
 
         QuestionTxt.text = QnA[currentQuestion].question;
         SetAnswers();
