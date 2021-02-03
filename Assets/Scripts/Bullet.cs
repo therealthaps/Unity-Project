@@ -23,7 +23,7 @@ public class Bullet : MonoBehaviour
             enemy.TakeDamage(damage);
         }
 
-        AnswerScript answer = hitInfo.GetComponent<AnswerScript>();
+        CorrectAnswerScript answer = hitInfo.GetComponent<CorrectAnswerScript>();
         if (answer != null)
         {
             answer.TakeDamage(damage);

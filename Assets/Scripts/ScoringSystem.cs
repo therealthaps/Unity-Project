@@ -61,7 +61,7 @@ public class ScoringSystem : MonoBehaviour
     {
         Points -= 1000;
         QuestionsCorrect.Streak = 0;
-        QuestionsCorrect.Answered += 1;
+        //QuestionsCorrect.Answered += 1;
         StreakBarGrowth.SetStreak();
     }
 
