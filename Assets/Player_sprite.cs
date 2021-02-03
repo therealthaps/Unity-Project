@@ -7,7 +7,7 @@ public class Player_sprite: MonoBehaviour
     [SerializeField]// to control value through the inspector
     private float speed = 7f;
     public float horizontalInput;
-    public float verticalInput;
+
     
     
     [SerializeField]
@@ -36,14 +36,7 @@ public class Player_sprite: MonoBehaviour
         // if player position on y is greater than 0
         //y position=0
         // else if position on y is less than -3.8f
-        if (transform.position.y >= 4.28f)
-        {
-            transform.position = new Vector3(transform.position.x, 1.0f, 0);
-        }
-        else if (transform.position.y <= -3.81f)
-        {
-            transform.position = new Vector3(transform.position.x, -2.5f, 0);
-        }
+        
 
         if (transform.position.x <= -7.79f)
         {

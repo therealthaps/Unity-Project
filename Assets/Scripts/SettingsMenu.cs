@@ -21,14 +21,16 @@ public class SettingsMenu : MonoBehaviour
         {
             Time.timeScale = 0;
             isPaused = true;
-            isPaused = true;
+            
             if (Panel != null)
             {
                 Panel.SetActive(true);
 
 
-
+                
             }
+            
+
         }
     }
 }
