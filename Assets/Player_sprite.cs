@@ -9,6 +9,7 @@ public class Player_sprite: MonoBehaviour
     public float horizontalInput;
     private AudioSource[] soundfx;
     private SpriteRenderer player;
+    private RestartScript restart;
     
     
     [SerializeField]
@@ -19,6 +20,7 @@ public class Player_sprite: MonoBehaviour
     {
         soundfx = GetComponents<AudioSource>();
         player = GetComponent<SpriteRenderer>();
+        restart = GameObject.Find("RestartObject").GetComponent<RestartScript>();
     }
 
     // Update is called once per frame
@@ -57,6 +59,7 @@ public class Player_sprite: MonoBehaviour
         {
             soundfx[2].Play();
             Destroy(player);
+            restart.TrigEndGameScreen();
         }
         soundfx[1].Play();
     }
