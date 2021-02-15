@@ -7,7 +7,9 @@ public class Player_sprite: MonoBehaviour
     [SerializeField]// to control value through the inspector
     private float speed = 7f;
     public float horizontalInput;
-
+    private AudioSource[] soundfx;
+    private SpriteRenderer player;
+    private RestartScript restart;
     
     
     [SerializeField]
@@ -16,7 +18,9 @@ public class Player_sprite: MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        soundfx = GetComponents<AudioSource>();
+        player = GetComponent<SpriteRenderer>();
+        restart = GameObject.Find("RestartObject").GetComponent<RestartScript>();
     }
 
     // Update is called once per frame
@@ -53,8 +57,11 @@ public class Player_sprite: MonoBehaviour
         lives -= 1;
         if (lives < 1)
         {
-            Destroy(this.gameObject);
+            soundfx[2].Play();
+            Destroy(player);
+            restart.TrigEndGameScreen();
         }
+        soundfx[1].Play();
     }
 
 }

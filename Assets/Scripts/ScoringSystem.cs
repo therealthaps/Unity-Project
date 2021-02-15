@@ -39,11 +39,11 @@ public class ScoringSystem : MonoBehaviour
         {
             Points += 1000;
         }
-        else if (strk > 5)
+        else if (strk > 5 && strk <= 10)
         {
             Points += 2000;
         }
-        else if (strk > 10) 
+        else if (strk > 10 && strk <= 20) 
         {
             Points += 4000;
         }
