@@ -11,13 +11,21 @@ public class AnswerOptionsScript : MonoBehaviour
     {
         if (isCorrect)
         {
-            Debug.Log("Correct");
             quizManager.correct();
         }
         else
         {
-            Debug.Log("Wrong");
+            quizManager.inCorrect();
         }
     }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.tag == "bullet")
+        {
+            Answer();
+        }
+    }
+
 
 }

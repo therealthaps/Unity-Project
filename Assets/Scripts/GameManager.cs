@@ -43,6 +43,14 @@ public class GameManager : MonoBehaviour
 
     public void correct()
     {
+        ScoringSystem.Correct();
+        QnA.RemoveAt(currentQuestion);
+        generateQuestion();
+    }
+
+    public void inCorrect()
+    {
+        ScoringSystem.Incorrect();
         QnA.RemoveAt(currentQuestion);
         generateQuestion();
     }
