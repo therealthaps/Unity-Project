@@ -55,7 +55,6 @@ public class GameManager : MonoBehaviour
         generateQuestion();
     }
 
-
     void SetAnswers()
     {
         for (int i = 0; i < options.Length; i++)
@@ -63,7 +62,7 @@ public class GameManager : MonoBehaviour
             options[i].GetComponent<AnswerOptionsScript>().isCorrect = false;
             options[i].transform.GetChild(0).GetComponent<Text>().text = QnA[currentQuestion].answer[i];
 
-            if (QnA[currentQuestion].CorrectAnswer == i)
+            if (QnA[currentQuestion].CorrectAnswer == i + 1)
             {
                 options[i].GetComponent<AnswerOptionsScript>().isCorrect = true;
             }
@@ -72,7 +71,7 @@ public class GameManager : MonoBehaviour
 
     void generateQuestion()
     {
-        currentQuestion = Random.Range(0, QnA.Count);
+        currentQuestion = 0;
 
         QuestionTxt.text = QnA[currentQuestion].question;
         SetAnswers();

@@ -19,13 +19,17 @@ public class StreakMultiplier : MonoBehaviour
         {
             txt.text = "x2";
         }
-        if (QuestionsCorrect.Streak >= 10 && QuestionsCorrect.Streak < 20)
+        else if (QuestionsCorrect.Streak >= 10 && QuestionsCorrect.Streak < 20)
         {
             txt.text = "x4";
         }
-        if (QuestionsCorrect.Streak >= 20)
+        else if (QuestionsCorrect.Streak >= 20)
         {
             txt.text = "x8";
+        }
+        else
+        {
+            txt.text = "";
         }
     }
 }
