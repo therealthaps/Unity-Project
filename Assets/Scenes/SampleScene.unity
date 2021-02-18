@@ -2251,6 +2251,108 @@ PrefabInstance:
       propertyPath: options.Array.data[3]
       value: 
       objectReference: {fileID: 1101802082}
+    - target: {fileID: 7813378670334108607, guid: 0fe76489a61e3584b96e8d768befdc2a,
+        type: 3}
+      propertyPath: QnA.Array.data[0].question
+      value: 'A 2D object on the stage that can be given commands:
+
+        A: Computer
+
+        B:
+        Sprite
+
+        C: Loop
+
+        D: Comments'
+      objectReference: {fileID: 0}
+    - target: {fileID: 7813378670334108607, guid: 0fe76489a61e3584b96e8d768befdc2a,
+        type: 3}
+      propertyPath: QnA.Array.data[1].question
+      value: 'A block of code with commands that will run more than once
+
+        A:
+        Loop
+
+        B: Computer
+
+        C: Variable
+
+        D: Pixel'
+      objectReference: {fileID: 0}
+    - target: {fileID: 7813378670334108607, guid: 0fe76489a61e3584b96e8d768befdc2a,
+        type: 3}
+      propertyPath: QnA.Array.data[2].question
+      value: 'A name that stores a value.
+
+        A: Sprite
+
+        B: Comment
+
+        C:
+        Bug
+
+        D: Variable'
+      objectReference: {fileID: 0}
+    - target: {fileID: 7813378670334108607, guid: 0fe76489a61e3584b96e8d768befdc2a,
+        type: 3}
+      propertyPath: QnA.Array.data[0].answer.Array.data[0]
+      value: A
+      objectReference: {fileID: 0}
+    - target: {fileID: 7813378670334108607, guid: 0fe76489a61e3584b96e8d768befdc2a,
+        type: 3}
+      propertyPath: QnA.Array.data[0].answer.Array.data[1]
+      value: B
+      objectReference: {fileID: 0}
+    - target: {fileID: 7813378670334108607, guid: 0fe76489a61e3584b96e8d768befdc2a,
+        type: 3}
+      propertyPath: QnA.Array.data[0].answer.Array.data[2]
+      value: C
+      objectReference: {fileID: 0}
+    - target: {fileID: 7813378670334108607, guid: 0fe76489a61e3584b96e8d768befdc2a,
+        type: 3}
+      propertyPath: QnA.Array.data[0].answer.Array.data[3]
+      value: D
+      objectReference: {fileID: 0}
+    - target: {fileID: 7813378670334108607, guid: 0fe76489a61e3584b96e8d768befdc2a,
+        type: 3}
+      propertyPath: QnA.Array.data[1].answer.Array.data[0]
+      value: A
+      objectReference: {fileID: 0}
+    - target: {fileID: 7813378670334108607, guid: 0fe76489a61e3584b96e8d768befdc2a,
+        type: 3}
+      propertyPath: QnA.Array.data[1].answer.Array.data[1]
+      value: B
+      objectReference: {fileID: 0}
+    - target: {fileID: 7813378670334108607, guid: 0fe76489a61e3584b96e8d768befdc2a,
+        type: 3}
+      propertyPath: QnA.Array.data[1].answer.Array.data[2]
+      value: C
+      objectReference: {fileID: 0}
+    - target: {fileID: 7813378670334108607, guid: 0fe76489a61e3584b96e8d768befdc2a,
+        type: 3}
+      propertyPath: QnA.Array.data[1].answer.Array.data[3]
+      value: D
+      objectReference: {fileID: 0}
+    - target: {fileID: 7813378670334108607, guid: 0fe76489a61e3584b96e8d768befdc2a,
+        type: 3}
+      propertyPath: QnA.Array.data[2].answer.Array.data[0]
+      value: A
+      objectReference: {fileID: 0}
+    - target: {fileID: 7813378670334108607, guid: 0fe76489a61e3584b96e8d768befdc2a,
+        type: 3}
+      propertyPath: QnA.Array.data[2].answer.Array.data[1]
+      value: B
+      objectReference: {fileID: 0}
+    - target: {fileID: 7813378670334108607, guid: 0fe76489a61e3584b96e8d768befdc2a,
+        type: 3}
+      propertyPath: QnA.Array.data[2].answer.Array.data[2]
+      value: C
+      objectReference: {fileID: 0}
+    - target: {fileID: 7813378670334108607, guid: 0fe76489a61e3584b96e8d768befdc2a,
+        type: 3}
+      propertyPath: QnA.Array.data[2].answer.Array.data[3]
+      value: D
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0fe76489a61e3584b96e8d768befdc2a, type: 3}
 --- !u!114 &5128660466408279996 stripped
