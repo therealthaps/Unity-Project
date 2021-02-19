@@ -22,6 +22,11 @@ public class RestartScript : MonoBehaviour
     {
         SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex);// loads current scene
     }
+
+    public void MainMenu()
+    {
+        SceneManager.LoadSceneAsync(0);// loads main menu
+    }
     public void TrigEndGameScreen()
     {
         endgamescreen.SetActive(true);
@@ -31,3 +36,4 @@ public class RestartScript : MonoBehaviour
         Application.Quit();
     }
 }
+
