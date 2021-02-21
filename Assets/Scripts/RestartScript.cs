@@ -1,7 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using UnityEngine.SceneManagement;
+
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class RestartScript : MonoBehaviour
 {
@@ -19,8 +20,12 @@ public class RestartScript : MonoBehaviour
     }
     public void RestartGame()
     {
-        Time.timeScale = 1;
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);// loads current scene
+        SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex);// loads current scene
+    }
+
+    public void MainMenu()
+    {
+        SceneManager.LoadSceneAsync(0);// loads main menu
     }
     public void TrigEndGameScreen()
     {
@@ -31,3 +36,4 @@ public class RestartScript : MonoBehaviour
         Application.Quit();
     }
 }
+
