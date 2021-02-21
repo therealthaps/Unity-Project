@@ -6,12 +6,16 @@ public class AnswerOptionsScript : MonoBehaviour
 {
     public bool isCorrect = false;
     public GameManager quizManager;
+    public GameObject panel1;
+
 
     public void Answer()
     {
         if (isCorrect)
         {
             quizManager.correct();
+            panel1.SetActive(true);
+
         }
         else
         {
