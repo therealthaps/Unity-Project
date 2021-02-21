@@ -6,29 +6,29 @@ using System.Linq;
 
 public class GameManager : MonoBehaviour
 {
-   /* public Question[] questions;
-    private static List<Question> unansweredQuestions;
-    private Question currentQuestion;
+    /* public Question[] questions;
+     private static List<Question> unansweredQuestions;
+     private Question currentQuestion;
 
-    [SerializeField]
-    private Text questionText;
+     [SerializeField]
+     private Text questionText;
 
-    void Start()
-    {
-        if (unansweredQuestions == null || unansweredQuestions.Count == 0)
-            unansweredQuestions = questions.ToList<Question>();
+     void Start()
+     {
+         if (unansweredQuestions == null || unansweredQuestions.Count == 0)
+             unansweredQuestions = questions.ToList<Question>();
 
-        SetCurrentQuestion();
-    }
+         SetCurrentQuestion();
+     }
 
-    void SetCurrentQuestion()
-    {
-        currentQuestion = unansweredQuestions[0];
+     void SetCurrentQuestion()
+     {
+         currentQuestion = unansweredQuestions[0];
 
-        questionText.text = currentQuestion.question;
+         questionText.text = currentQuestion.question;
 
-        unansweredQuestions.RemoveAt(0);
-    }*/
+         unansweredQuestions.RemoveAt(0);
+     }*/
 
     public List<Question> QnA;
     public GameObject[] options;
@@ -54,7 +54,7 @@ public class GameManager : MonoBehaviour
         ScoringSystem.Correct();
         QnA.RemoveAt(currentQuestion);
         generateQuestion();
-        
+
     }
 
     public void inCorrect()
