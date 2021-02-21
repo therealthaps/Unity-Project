@@ -6,36 +6,37 @@ using System.Linq;
 
 public class GameManager : MonoBehaviour
 {
-   /* public Question[] questions;
-    private static List<Question> unansweredQuestions;
-    private Question currentQuestion;
+    /* public Question[] questions;
+     private static List<Question> unansweredQuestions;
+     private Question currentQuestion;
 
-    [SerializeField]
-    private Text questionText;
+     [SerializeField]
+     private Text questionText;
 
-    void Start()
-    {
-        if (unansweredQuestions == null || unansweredQuestions.Count == 0)
-            unansweredQuestions = questions.ToList<Question>();
+     void Start()
+     {
+         if (unansweredQuestions == null || unansweredQuestions.Count == 0)
+             unansweredQuestions = questions.ToList<Question>();
 
-        SetCurrentQuestion();
-    }
+         SetCurrentQuestion();
+     }
 
-    void SetCurrentQuestion()
-    {
-        currentQuestion = unansweredQuestions[0];
+     void SetCurrentQuestion()
+     {
+         currentQuestion = unansweredQuestions[0];
 
-        questionText.text = currentQuestion.question;
+         questionText.text = currentQuestion.question;
 
-        unansweredQuestions.RemoveAt(0);
-    }*/
+         unansweredQuestions.RemoveAt(0);
+     }*/
 
     public List<Question> QnA;
     public GameObject[] options;
     public int currentQuestion;
 
     public Text QuestionTxt;
-
+    public GameObject panel1;
+    public GameObject panel2;
     public void Start()
     {
         generateQuestion();
@@ -43,13 +44,26 @@ public class GameManager : MonoBehaviour
 
     public void correct()
     {
+
+        panel1.SetActive(true);
+        if (panel1.activeSelf == true)
+        {
+            panel2.SetActive(false);
+        }
+
         ScoringSystem.Correct();
         QnA.RemoveAt(currentQuestion);
         generateQuestion();
+
     }
 
     public void inCorrect()
     {
+        panel2.SetActive(true);
+        if (panel2.activeSelf == true)
+        {
+            panel1.SetActive(false);
+        }
         ScoringSystem.Incorrect();
         QnA.RemoveAt(currentQuestion);
         generateQuestion();
@@ -79,6 +93,5 @@ public class GameManager : MonoBehaviour
 
 
     }
-
-
+    
 }
