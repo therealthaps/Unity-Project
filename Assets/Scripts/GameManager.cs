@@ -37,6 +37,7 @@ public class GameManager : MonoBehaviour
     public Text QuestionTxt;
     public GameObject panel1;
     public GameObject panel2;
+    public GameObject panel3;
     public void Start()
     {
         generateQuestion();
@@ -91,7 +92,11 @@ public class GameManager : MonoBehaviour
         QuestionTxt.text = QnA[currentQuestion].question;
         SetAnswers();
 
+        if (QnA[currentQuestion]== null)
+        {
 
+            panel3.SetActive(true);
+        }
 
     }
     
