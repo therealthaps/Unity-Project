@@ -3393,6 +3393,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wrong answer pop-up
       objectReference: {fileID: 0}
+    - target: {fileID: 3251090625972325762, guid: 28309263f4d3e409d949ed7482ea5ba5,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3251090625972325766, guid: 28309263f4d3e409d949ed7482ea5ba5,
         type: 3}
       propertyPath: m_Pivot.x
@@ -3476,12 +3481,12 @@ PrefabInstance:
     - target: {fileID: 3251090625972325766, guid: 28309263f4d3e409d949ed7482ea5ba5,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -8.046165
+      value: -8.19
       objectReference: {fileID: 0}
     - target: {fileID: 3251090625972325766, guid: 28309263f4d3e409d949ed7482ea5ba5,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -2.696
+      value: 4.87
       objectReference: {fileID: 0}
     - target: {fileID: 3251090625972325766, guid: 28309263f4d3e409d949ed7482ea5ba5,
         type: 3}
@@ -6002,12 +6007,12 @@ PrefabInstance:
     - target: {fileID: 8560746032125793751, guid: 0701facead62749f19b3310ff407b170,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -8.046165
+      value: -8.34
       objectReference: {fileID: 0}
     - target: {fileID: 8560746032125793751, guid: 0701facead62749f19b3310ff407b170,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -2.696
+      value: 4.73
       objectReference: {fileID: 0}
     - target: {fileID: 8560746032125793751, guid: 0701facead62749f19b3310ff407b170,
         type: 3}
@@ -6028,6 +6033,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Right Answer pop-up
+      objectReference: {fileID: 0}
+    - target: {fileID: 8560746032125793755, guid: 0701facead62749f19b3310ff407b170,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0701facead62749f19b3310ff407b170, type: 3}
