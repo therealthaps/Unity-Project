@@ -6,11 +6,12 @@ using UnityEngine.SceneManagement;
 
 public class RestartScript : MonoBehaviour
 {
+    private AudioMixer aud;
     public GameObject endgamescreen;
     // Start is called before the first frame update
     void Start()
     {
-        
+        aud = GameObject.Find("MusicPlayer").GetComponent<AudioMixer>();
     }
 
     // Update is called once per frame
@@ -20,6 +21,7 @@ public class RestartScript : MonoBehaviour
     }
     public void RestartGame()
     {
+        aud.gameOver = false;
         SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex);// loads current scene
     }
 
@@ -30,6 +32,8 @@ public class RestartScript : MonoBehaviour
     public void TrigEndGameScreen()
     {
         endgamescreen.SetActive(true);
+        aud.gameOver = true;
+
     }
     public void QuitGame()
     {
