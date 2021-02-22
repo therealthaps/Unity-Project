@@ -1,0 +1,14 @@
+ManifestFileVersion: 0
+<<<<<<< HEAD
+CRC: 497064551
+=======
+CRC: 1472390449
+>>>>>>> Feature.Bishakha
+AssetBundleManifest:
+  AssetBundleInfos:
+    Info_0:
+      Name: rikrrage
+      Dependencies: {}
+    Info_1:
+      Name: rikrpoison
+      Dependencies: {}
