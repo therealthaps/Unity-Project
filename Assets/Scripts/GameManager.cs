@@ -33,6 +33,7 @@ public class GameManager : MonoBehaviour
     public List<Question> QnA;
     public GameObject[] options;
     public int currentQuestion;
+    private GameObject[] impEffs;
 
     public Text QuestionTxt;
     public GameObject panel1;
@@ -41,7 +42,14 @@ public class GameManager : MonoBehaviour
     {
         generateQuestion();
     }
-
+    public void Update()
+    {
+        impEffs = GameObject.FindGameObjectsWithTag("Impact");
+        foreach (GameObject g in impEffs)
+        {
+            g.SetActive(false);
+        }
+    }
     public void correct()
     {
 
