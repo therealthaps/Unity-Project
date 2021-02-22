@@ -4354,7 +4354,7 @@ PrefabInstance:
     - target: {fileID: 3251090626036562330, guid: 28309263f4d3e409d949ed7482ea5ba5,
         type: 3}
       propertyPath: m_Text
-      value: "   Wrong \n   Answer"
+      value: "   Wrong \n  Answer"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 28309263f4d3e409d949ed7482ea5ba5, type: 3}
