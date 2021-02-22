@@ -49,6 +49,7 @@ public class GameManager : MonoBehaviour
         if (panel1.activeSelf == true)
         {
             panel2.SetActive(false);
+            
         }
 
         ScoringSystem.Correct();
