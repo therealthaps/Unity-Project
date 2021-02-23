@@ -4,8 +4,10 @@ public class AudioMixer : MonoBehaviour
 {
 
     // Reference to Audio Source component
-    private AudioSource audioSrc;
+    private AudioSource[] audioSrcArr;
     private bool isMuted;
+    public bool gameOver;
+    public bool isTheme;
 
     // Music volume variable that will be modified
     // by dragging slider knob
@@ -15,8 +17,12 @@ public class AudioMixer : MonoBehaviour
     void Start()
     {
         isMuted = false;
+        audioSrcArr = GetComponents<AudioSource>();
         // Assign Audio Source component to control it
-        audioSrc = GetComponent<AudioSource>();
+        if (isTheme)
+        {
+            audioSrcArr[0].Play();
+        }
     }
 
     // Update is called once per frame
@@ -24,7 +30,12 @@ public class AudioMixer : MonoBehaviour
     {
 
         // Setting volume option of Audio Source to be equal to musicVolume
-        audioSrc.volume = musicVolume;
+        audioSrcArr[0].volume = musicVolume;
+        if (gameOver && !audioSrcArr[1].isPlaying)
+        {
+            audioSrcArr[0].Stop();
+            GameOverMusic();
+        }
     }
 
     // Method that is called by slider game object
@@ -39,5 +50,9 @@ public class AudioMixer : MonoBehaviour
 
         isMuted = !isMuted;
         AudioListener.pause = isMuted;
+    }
+    private void GameOverMusic()
+    {
+        audioSrcArr[1].Play();
     }
 }
