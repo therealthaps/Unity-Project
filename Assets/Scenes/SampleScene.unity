@@ -1148,7 +1148,7 @@ GameObject:
   - component: {fileID: 1223690351}
   - component: {fileID: 1223690355}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: PauseCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1353,6 +1353,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4d40ab2e6451745009a1d31da21c2230, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1668133096 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5232995430874358433, guid: 70513f96aa54e554c9d6b2349369e5e8,
+    type: 3}
+  m_PrefabInstance: {fileID: 2114018332690821688}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70d5e42ac6455ca4b8048831e0746d9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1685150599
@@ -1603,8 +1615,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1223690355}
-        m_MethodName: LoadMenu
+      - m_Target: {fileID: 1668133096}
+        m_MethodName: MainMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2164,6 +2176,36 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
+      objectReference: {fileID: 1668133096}
+    - target: {fileID: 3115846725235775781, guid: 70513f96aa54e554c9d6b2349369e5e8,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3115846725235775781, guid: 70513f96aa54e554c9d6b2349369e5e8,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: MainMenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 3115846725235775781, guid: 70513f96aa54e554c9d6b2349369e5e8,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 3115846725235775781, guid: 70513f96aa54e554c9d6b2349369e5e8,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3115846725235775781, guid: 70513f96aa54e554c9d6b2349369e5e8,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3115846725235775781, guid: 70513f96aa54e554c9d6b2349369e5e8,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
       objectReference: {fileID: 1990961284}
     - target: {fileID: 3115846725235775781, guid: 70513f96aa54e554c9d6b2349369e5e8,
         type: 3}
@@ -2502,8 +2544,7 @@ PrefabInstance:
 
         A: Computer
 
-        B:
-        Sprite
+        B: Sprite
 
         C: Loop
 
@@ -2515,8 +2556,7 @@ PrefabInstance:
       value: 'A block of code with commands that will run more than once
 
 
-        A:
-        Loop
+        A: Loop
 
         B: Computer
 
@@ -2534,8 +2574,7 @@ PrefabInstance:
 
         B: Comment
 
-        C:
-        Bug
+        C: Bug
 
         D: Variable'
       objectReference: {fileID: 0}
@@ -2551,8 +2590,7 @@ PrefabInstance:
       value: 'A line that is used to provide information about the code.
 
 
-        A:
-        Stage
+        A: Stage
 
         B: Pixel
 
@@ -2570,8 +2608,7 @@ PrefabInstance:
 
         A: 0 & 2
 
-        B:
-        1 & 2
+        B: 1 & 2
 
         C: 0 & 1
 
@@ -2588,8 +2625,8 @@ PrefabInstance:
     - target: {fileID: 7813378670334108607, guid: 0fe76489a61e3584b96e8d768befdc2a,
         type: 3}
       propertyPath: QnA.Array.data[7].question
-      value: "A function should be called..\r\n\nA: Just once \r\nB: Never\r\nC:
-        Twice\r\nD: As many as needed\r\n"
+      value: "A function should be called..\r\n\nA: Just once \r\nB: Never\r\nC: Twice\r\nD:
+        As many as needed\r\n"
       objectReference: {fileID: 0}
     - target: {fileID: 7813378670334108607, guid: 0fe76489a61e3584b96e8d768befdc2a,
         type: 3}
@@ -2597,8 +2634,7 @@ PrefabInstance:
       value: 'For the command "turnLeft(angle);" which is the parameter?
 
 
-        A:
-        left
+        A: left
 
         B: turn
 
@@ -2611,8 +2647,8 @@ PrefabInstance:
     - target: {fileID: 7813378670334108607, guid: 0fe76489a61e3584b96e8d768befdc2a,
         type: 3}
       propertyPath: QnA.Array.data[9].question
-      value: "How many parameters does the command \"moveTo(x,y)\" have?\r\n\nA:
-        1\r\nB: 2 \r\nC: 3\r\nD: 4\r\n"
+      value: "How many parameters does the command \"moveTo(x,y)\" have?\r\n\nA: 1\r\nB:
+        2 \r\nC: 3\r\nD: 4\r\n"
       objectReference: {fileID: 0}
     - target: {fileID: 7813378670334108607, guid: 0fe76489a61e3584b96e8d768befdc2a,
         type: 3}
@@ -2622,8 +2658,7 @@ PrefabInstance:
 
         A: 1
 
-        B:
-        2
+        B: 2
 
         C: 3
 
@@ -2650,8 +2685,7 @@ PrefabInstance:
 
         C: str[1]
 
-        D:
-        str.charAt[0]'
+        D: str.charAt[0]'
       objectReference: {fileID: 0}
     - target: {fileID: 7813378670334108607, guid: 0fe76489a61e3584b96e8d768befdc2a,
         type: 3}
@@ -2661,8 +2695,7 @@ PrefabInstance:
 
         A: double
 
-        B:
-        switch
+        B: switch
 
         C: then
 
@@ -2676,8 +2709,7 @@ PrefabInstance:
 
         A: ()
 
-        B:
-        ++
+        B: ++
 
         C: *
 
@@ -2690,14 +2722,11 @@ PrefabInstance:
 
 
 
-        A: A constructor
-        must have the same name as the class it is declared within.
+        A: A constructor must have the same name as the class it is declared within.
 
-        B: A
-        constructor is used to create objects.
+        B: A constructor is used to create objects.
 
-        C: A constructor may be declared
-        private
+        C: A constructor may be declared private
 
         D: All of the above'
       objectReference: {fileID: 0}
@@ -2714,8 +2743,7 @@ PrefabInstance:
 
         C: new malloc
 
-        D:
-        new'
+        D: new'
       objectReference: {fileID: 0}
     - target: {fileID: 7813378670334108607, guid: 0fe76489a61e3584b96e8d768befdc2a,
         type: 3}
@@ -2723,15 +2751,13 @@ PrefabInstance:
       value: 'Modulus operator (%) can be applied to which of these?
 
 
-        A:
-        Integers
+        A: Integers
 
         B: Floating - point numbers
 
         C: Both A and B
 
-        D:
-        None of These'
+        D: None of These'
       objectReference: {fileID: 0}
     - target: {fileID: 7813378670334108607, guid: 0fe76489a61e3584b96e8d768befdc2a,
         type: 3}
@@ -2741,13 +2767,11 @@ PrefabInstance:
 
         A: Java Very Large Machine
 
-        B:
-        Java Verified Machine
+        B: Java Verified Machine
 
         C: Java Very Small Machine
 
-        D: Java
-        Virtual Machine'
+        D: Java Virtual Machine'
       objectReference: {fileID: 0}
     - target: {fileID: 7813378670334108607, guid: 0fe76489a61e3584b96e8d768befdc2a,
         type: 3}
@@ -2755,15 +2779,13 @@ PrefabInstance:
       value: 'How can you increment 1 from an integer variable named number in Java?
 
 
-        A:
-        number++;
+        A: number++;
 
         B: number = number + 1;
 
         C: number += 1;
 
-        D:
-        All of the above
+        D: All of the above
 
 '
       objectReference: {fileID: 0}
