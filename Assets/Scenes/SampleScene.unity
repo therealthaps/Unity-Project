@@ -588,7 +588,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5.346178
+  orthographic size: 5.4296126
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -620,7 +620,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -0.4, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &530935469
@@ -3367,6 +3367,16 @@ PrefabInstance:
       propertyPath: Panel
       value: 
       objectReference: {fileID: 83516906054392865}
+    - target: {fileID: 8549726413249194102, guid: c6be4e4affb11164695e2a8617b473ef,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 19.411877
+      objectReference: {fileID: 0}
+    - target: {fileID: 8549726413249194102, guid: c6be4e4affb11164695e2a8617b473ef,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c6be4e4affb11164695e2a8617b473ef, type: 3}
 --- !u!1001 &4251909858002809592

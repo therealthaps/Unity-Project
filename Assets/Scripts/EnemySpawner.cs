@@ -23,26 +23,30 @@ public class EnemySpawner : MonoBehaviour
         SpawnEnemies(start_count);
         gm = FindObjectOfType<GameManager>();
         gm.DisableQandA();
-        StartCoroutine(SpawnRoutine());
+        //StartCoroutine(SpawnRoutine());
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (currentCount == 0 && !questionTime)
+        {
+            ToggleQuestTime();
+            currentCount = EnemyCount;
+        }
     }
-    IEnumerator SpawnRoutine()
+ /*   IEnumerator SpawnRoutine()
     {
         while (!gameOver)
         {
             if (currentCount == 0)
             {
                 ToggleQuestTime();
-                return 0;
+                yield return new WaitForSeconds(3.0f);
             }
         }
 
-    }
+    }*/
     public void SpawnEnemies()
     {
         for (int i = 0; i < (EnemyCount + 1); i++)
@@ -73,7 +77,7 @@ public class EnemySpawner : MonoBehaviour
     {
         return questionTime;
     }
-    public void ToggleQuestTime()
+    public void ToggleQuestTime(bool forceOff = false)
     {
         questionTime = !questionTime;
         if (questionTime)
@@ -81,9 +85,11 @@ public class EnemySpawner : MonoBehaviour
             gm.EnableQandA();
             spawned = false;
         }
-        else
+        else if (forceOff)
         {
+            questionTime = false;
             gm.DisableQandA();
+            SpawnEnemies();
         }
     }
     public static void EnemyKilled()

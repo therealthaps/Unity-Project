@@ -32,7 +32,7 @@ public class GameManager : MonoBehaviour
 
     public List<Question> QnA;
     public GameObject[] options;
-    public int currentQuestion;
+    public int currentQuestion = 0;
     private GameObject[] impEffs;
 
     public Text QuestionTxt;
@@ -41,7 +41,6 @@ public class GameManager : MonoBehaviour
     public EnemySpawner es;
     public void Start()
     {
-        generateQuestion();
     }
     public void Update()
     {
@@ -64,7 +63,7 @@ public class GameManager : MonoBehaviour
 
         ScoringSystem.Correct();
         QnA.RemoveAt(currentQuestion);
-        es.ToggleQuestTime();
+        es.ToggleQuestTime(true);
     }
 
     public void EnableQandA()
@@ -81,7 +80,6 @@ public class GameManager : MonoBehaviour
         {
             item.SetActive(false);
         }
-        es.SpawnEnemies();
     }
     public void inCorrect()
     {
@@ -94,7 +92,7 @@ public class GameManager : MonoBehaviour
         }
         ScoringSystem.Incorrect();
         QnA.RemoveAt(currentQuestion);
-        es.ToggleQuestTime();
+        es.ToggleQuestTime(true);
     }
 
     void SetAnswers()
@@ -111,13 +109,15 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    void generateQuestion()
+    public void generateQuestion()
     {
-        EnableQandA();
-        currentQuestion = 0;
 
         QuestionTxt.text = QnA[currentQuestion].question;
         SetAnswers();
+        if (currentQuestion < 39)
+        {
+            currentQuestion += 1;
+        }
     }
     
 }
