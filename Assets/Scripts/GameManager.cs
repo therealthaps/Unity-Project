@@ -53,7 +53,8 @@ public class GameManager : MonoBehaviour
     }
     public void correct()
     {
-
+        panel2.SetActive(false);
+        panel1.SetActive(false);
         panel1.SetActive(true);
         if (panel1.activeSelf == true)
         {
@@ -84,6 +85,8 @@ public class GameManager : MonoBehaviour
     }
     public void inCorrect()
     {
+        panel2.SetActive(false);
+        panel1.SetActive(false);
         panel2.SetActive(true);
         if (panel2.activeSelf == true)
         {
