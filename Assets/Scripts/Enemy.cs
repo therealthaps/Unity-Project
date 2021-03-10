@@ -12,8 +12,8 @@ public class Enemy : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        float randomX = Random.Range(-7.79f, 2.16f);
-        transform.position= new Vector3(randomX,4.28f,0);
+        float randomX = Random.Range(-2.8f, 9.0f);
+        transform.position= new Vector3(randomX,4.0f,0);
     }
 
     // Update is called once per frame
@@ -23,8 +23,8 @@ public class Enemy : MonoBehaviour
             transform.Translate(new Vector3(0, -1, 0) * speed * Time.deltaTime);
 
             if (transform.position.y < -3.0f) {
-                float randomX = Random.Range(-7.79f, 2.16f);
-                transform.position = new Vector3(randomX, 2.5f, 0);
+                float randomX = Random.Range(-2.8f, 9.0f);
+                transform.position = new Vector3(randomX, 4.0f, 0);
             }
 
         }
