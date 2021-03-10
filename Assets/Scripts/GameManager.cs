@@ -34,6 +34,7 @@ public class GameManager : MonoBehaviour
     public GameObject[] options;
     public int currentQuestion = 0;
     private GameObject[] impEffs;
+    public GameObject timer;
 
     public Text QuestionTxt;
     public GameObject panel1;
@@ -48,8 +49,9 @@ public class GameManager : MonoBehaviour
         foreach (GameObject g in impEffs)
         {
             g.SetActive(false);
-        } 
+        }
     }
+
     public void correct()
     {
         panel2.SetActive(false);
@@ -114,10 +116,13 @@ public class GameManager : MonoBehaviour
 
         QuestionTxt.text = QnA[currentQuestion].question;
         SetAnswers();
+        timer.SetActive(true);
         if (currentQuestion < 39)
         {
             currentQuestion += 1;
         }
     }
+
+
     
 }

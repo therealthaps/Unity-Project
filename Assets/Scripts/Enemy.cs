@@ -36,18 +36,21 @@ public class Enemy : MonoBehaviour
             if (other.tag == "bullet") {
                 Destroy(other.gameObject);
                 Debug.Log("Hit2");
-            damage -= 50;
-            if (damage <= 0)
+                damage -= 50;
+                if (damage <= 0)
+                {
+                    Die();
+                    ScoringSystem.EnemyKilled();
+                }
+            }
+            if (other.tag == "PLayer")
             {
-                Die();
-                ScoringSystem.EnemyKilled();
-            }
-            }
-            if (other.tag == "PLayer") {
                 GameControlScript.health -= 1;
                 Debug.Log("Hit1");
 
-            Destroy(this.gameObject);
+
+                //Destroy(this.gameObject);
+                Die();
 
                 Player_sprite player = other.transform.GetComponent<Player_sprite>();
                 if (player != null) {
@@ -62,6 +65,7 @@ public class Enemy : MonoBehaviour
         }
     void Die()
     {
+        EnemySpawner.EnemyKilled();
         Instantiate(deathEffect, transform.position, Quaternion.identity);
         Destroy(this.gameObject);
     }

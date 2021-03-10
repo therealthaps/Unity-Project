@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class EnemyScript : MonoBehaviour
 {
+    public EnemySpawner es;
     public int health = 100;
 
     public GameObject deathEffect;
@@ -16,14 +17,15 @@ public class EnemyScript : MonoBehaviour
         {
             Die();
             ScoringSystem.EnemyKilled();
-
         }
     }
 
     void Die()
     {
         Instantiate(deathEffect, transform.position, Quaternion.identity);
+        EnemySpawner.EnemyKilled();
         Destroy(gameObject);
+        
     }
     
 }

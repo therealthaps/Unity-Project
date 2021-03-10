@@ -15,6 +15,7 @@ public class EnemySpawner : MonoBehaviour
     static private bool inSpawn = false;
     static private bool questionTime = false;
     static private bool gameOver = false;
+    static public float timeRemaining;
 
     // Start is called before the first frame update
     void Start()
@@ -31,9 +32,15 @@ public class EnemySpawner : MonoBehaviour
     {
         if (currentCount == 0 && !questionTime)
         {
+            timeRemaining = 20;
             ToggleQuestTime();
             currentCount = EnemyCount;
         }
+        if (questionTime && timeRemaining > 0)
+        {
+            timeRemaining -= Time.deltaTime;
+        }
+
     }
  /*   IEnumerator SpawnRoutine()
     {
@@ -49,10 +56,11 @@ public class EnemySpawner : MonoBehaviour
     }*/
     public void SpawnEnemies()
     {
-        for (int i = 0; i < (EnemyCount + 1); i++)
+        currentCount = EnemyCount + 1;
+        for (int i = 0; i < EnemyCount + 1; i++)
         {
             inSpawn = true;
-            Invoke("spawnHelper", 3.0F);
+            Invoke("spawnHelper", 1.5F);
         }
         EnemyCount += 1;
         inSpawn = false;
@@ -73,13 +81,10 @@ public class EnemySpawner : MonoBehaviour
         Vector3 postToSpawn = new Vector3(Random.Range(-9.1f, 2.1f), 4.1f, 0);
         Instantiate(EnemyPrefab, postToSpawn, Quaternion.identity);
     }
-    public static bool GetQuestTime()
-    {
-        return questionTime;
-    }
     public void ToggleQuestTime(bool forceOff = false)
     {
         questionTime = !questionTime;
+        Timer.ResetTimer();
         if (questionTime)
         {
             gm.EnableQandA();
@@ -100,8 +105,12 @@ public class EnemySpawner : MonoBehaviour
     {
         EnemyCount += a;
     }
+    public static bool QT()
+    {
+        return questionTime;
+    }
 
 }
-    
+
 
 

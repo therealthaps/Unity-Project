@@ -68,6 +68,5 @@ public class ScoringSystem : MonoBehaviour
     public static void EnemyKilled()
     {
         Points += 500;
-        EnemySpawner.EnemyKilled();
     }
 }
