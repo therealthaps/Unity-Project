@@ -35,6 +35,7 @@ public class GameManager : MonoBehaviour
     public int currentQuestion = 0;
     private GameObject[] impEffs;
     public GameObject timer;
+    private List<int> used;
 
     public Text QuestionTxt;
     public GameObject panel1;
@@ -113,16 +114,20 @@ public class GameManager : MonoBehaviour
 
     public void generateQuestion()
     {
-
+        
         QuestionTxt.text = QnA[currentQuestion].question;
         SetAnswers();
         timer.SetActive(true);
-        if (currentQuestion < 39)
-        {
-            currentQuestion += 1;
-        }
+        used.Add(currentQuestion);
+        if (used.Count < QnA.Count)
+            currentQuestion = get_rand();
+
     }
 
-
+    private int get_rand()
+    {
+        int a = Random.Range(0, 39);
+        return used.IndexOf(a) != -1 ? a : get_rand();
+    }
     
 }

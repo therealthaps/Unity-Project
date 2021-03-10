@@ -275,6 +275,12 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &635247179 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8902318672875697773, guid: c6be4e4affb11164695e2a8617b473ef,
+    type: 3}
+  m_PrefabInstance: {fileID: 4164234929283165258}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &774092066
 GameObject:
   m_ObjectHideFlags: 0
@@ -2778,6 +2784,11 @@ PrefabInstance:
       propertyPath: es
       value: 
       objectReference: {fileID: 1469484764}
+    - target: {fileID: 7813378670334108607, guid: 0fe76489a61e3584b96e8d768befdc2a,
+        type: 3}
+      propertyPath: timer
+      value: 
+      objectReference: {fileID: 635247179}
     - target: {fileID: 7813378670334108607, guid: 0fe76489a61e3584b96e8d768befdc2a,
         type: 3}
       propertyPath: panel1
