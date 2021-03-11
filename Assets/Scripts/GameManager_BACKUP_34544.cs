@@ -40,11 +40,11 @@ public class GameManagerOld1 : MonoBehaviour
     public Text QuestionTxt;
     public GameObject panel1;
     public GameObject panel2;
-<<<<<<< HEAD
+
     public EnemySpawner es;
-=======
+
     public GameObject panel3;
->>>>>>> Kartikay.Feature
+
     public void Start()
     {
     }
@@ -126,21 +126,21 @@ public class GameManagerOld1 : MonoBehaviour
         if (used.Count < QnA.Count)
             currentQuestion = get_rand();
 
-<<<<<<< HEAD
+
     }
 
     private int get_rand()
     {
         int a = Random.Range(0, 39);
         return used.IndexOf(a) != -1 ? a : get_rand();
-=======
+
         if (QnA[currentQuestion]== null)
         {
 
             panel3.SetActive(true);
         }
 
->>>>>>> Kartikay.Feature
+
     }
     
 }
