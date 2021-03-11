@@ -32,31 +32,20 @@ public class GameManager : MonoBehaviour
 
     public List<Question> QnA;
     public GameObject[] options;
-    public int currentQuestion = 0;
-    private GameObject[] impEffs;
-    public GameObject timer;
-    private List<int> used;
+    public int currentQuestion;
 
     public Text QuestionTxt;
     public GameObject panel1;
     public GameObject panel2;
-    public EnemySpawner es;
+    public GameObject panel3;
     public void Start()
     {
-    }
-    public void Update()
-    {
-        impEffs = GameObject.FindGameObjectsWithTag("Impact");
-        foreach (GameObject g in impEffs)
-        {
-            g.SetActive(false);
-        }
+        generateQuestion();
     }
 
     public void correct()
     {
-        panel2.SetActive(false);
-        panel1.SetActive(false);
+
         panel1.SetActive(true);
         if (panel1.activeSelf == true)
         {
@@ -66,28 +55,12 @@ public class GameManager : MonoBehaviour
 
         ScoringSystem.Correct();
         QnA.RemoveAt(currentQuestion);
-        es.ToggleQuestTime(true);
+        generateQuestion();
+
     }
 
-    public void EnableQandA()
-    {
-        foreach (GameObject item in options)
-        {
-            item.SetActive(true);
-        }
-        generateQuestion();
-    }
-    public void DisableQandA()
-    {
-        foreach (GameObject item in options)
-        {
-            item.SetActive(false);
-        }
-    }
     public void inCorrect()
     {
-        panel2.SetActive(false);
-        panel1.SetActive(false);
         panel2.SetActive(true);
         if (panel2.activeSelf == true)
         {
@@ -95,7 +68,7 @@ public class GameManager : MonoBehaviour
         }
         ScoringSystem.Incorrect();
         QnA.RemoveAt(currentQuestion);
-        es.ToggleQuestTime(true);
+        generateQuestion();
     }
 
     void SetAnswers()
@@ -112,22 +85,19 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void generateQuestion()
+    void generateQuestion()
     {
-        
+        currentQuestion = 0;
+
         QuestionTxt.text = QnA[currentQuestion].question;
         SetAnswers();
-        timer.SetActive(true);
-        used.Add(currentQuestion);
-        if (used.Count < QnA.Count)
-            currentQuestion = get_rand();
 
-    }
+        if (QnA[currentQuestion]== null)
+        {
 
-    private int get_rand()
-    {
-        int a = Random.Range(0, 39);
-        return used.IndexOf(a) != -1 ? a : get_rand();
+            panel3.SetActive(true);
+        }
+
     }
     
 }
