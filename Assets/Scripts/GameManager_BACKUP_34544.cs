@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.Linq;
 
-public class GameManager : MonoBehaviour
+public class GameManagerOld1 : MonoBehaviour
 {
     /* public Question[] questions;
      private static List<Question> unansweredQuestions;
