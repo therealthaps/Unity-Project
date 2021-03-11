@@ -21,7 +21,7 @@ TagManager:
   - 
   - 
   - CVDFilter
-  - 
+  - Playerani
   - 
   - 
   - 
@@ -47,4 +47,7 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: New Layer
+    uniqueID: 3565521591
     locked: 0
