@@ -6,7 +6,16 @@ public class Tutorial : MonoBehaviour
 {
     public GameObject panel1;
     public GameObject panel2;
+    
     int count = 0;
+
+ 
+ 
+public static KeyCode SpacebarKey()
+    {
+        if (Application.isEditor) return KeyCode.O;
+        else return KeyCode.Space;
+    }
     // Start is called before the first frame update
     void Start()
     {
@@ -25,10 +34,12 @@ public class Tutorial : MonoBehaviour
             count++;
         }
 
-        if (Input.GetKey(KeyCode.Space))
+        if (Input.GetKeyDown(SpacebarKey()) && count == 1)
         {
+            Debug.Log("SpacePressed");
             panel2.SetActive(false);
-            
         }
+        
+
     }
 }
