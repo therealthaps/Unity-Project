@@ -35,7 +35,7 @@ public class GameManager : MonoBehaviour
     public int currentQuestion;
     private GameObject[] impEffs;
     public EnemySpawner es;
-
+    public GameObject LevelComplete;
     public Text QuestionTxt;
     public GameObject panel1;
     public GameObject panel2;
@@ -47,6 +47,10 @@ public class GameManager : MonoBehaviour
         foreach (GameObject g in impEffs)
         {
             g.SetActive(false);
+        }
+        if (QnA.Count == 0)
+        {
+            LevelComplete.SetActive(true);
         }
     }
     public void correct()
