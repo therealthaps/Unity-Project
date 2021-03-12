@@ -97,7 +97,7 @@ public class GameManager : MonoBehaviour
 
     void generateQuestion()
     {
-        currentQuestion = 0;
+        currentQuestion = Random.Range(0, QnA.Count);
 
         QuestionTxt.text = QnA[currentQuestion].question;
         SetAnswers();
