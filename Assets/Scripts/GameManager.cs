@@ -34,14 +34,13 @@ public class GameManager : MonoBehaviour
     public GameObject[] options;
     public int currentQuestion;
     private GameObject[] impEffs;
+    public EnemySpawner es;
 
     public Text QuestionTxt;
     public GameObject panel1;
     public GameObject panel2;
     public void Start()
-    {
-        generateQuestion();
-    }
+    {}
     public void Update()
     {
         impEffs = GameObject.FindGameObjectsWithTag("Impact");
@@ -63,8 +62,7 @@ public class GameManager : MonoBehaviour
 
         ScoringSystem.Correct();
         QnA.RemoveAt(currentQuestion);
-        generateQuestion();
-
+        es.ToggleQuestTime(true);
     }
 
     public void inCorrect()
@@ -78,7 +76,7 @@ public class GameManager : MonoBehaviour
         }
         ScoringSystem.Incorrect();
         QnA.RemoveAt(currentQuestion);
-        generateQuestion();
+        es.ToggleQuestTime(true);
     }
 
     void SetAnswers()
