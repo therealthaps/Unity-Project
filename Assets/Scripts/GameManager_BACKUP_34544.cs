@@ -134,7 +134,7 @@ public class GameManagerOld1 : MonoBehaviour
         int a = Random.Range(0, 39);
         return used.IndexOf(a) != -1 ? a : get_rand();
 
-        if (QnA[currentQuestion]== null)
+        if(QnA[currentQuestion]== null)
         {
 
             panel3.SetActive(true);
