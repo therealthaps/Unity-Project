@@ -311,6 +311,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &158344470 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7209628566808490819, guid: 36ea84ce98cc741cfaf644a75f2d144e,
+    type: 3}
+  m_PrefabInstance: {fileID: 7209628565916940815}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &194620046
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2979,6 +2985,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1091400585635148830, guid: 18d6b9e3fd78b429cb0e77ee62059be1,
+        type: 3}
+      propertyPath: gm
+      value: 
+      objectReference: {fileID: 5128660466408279996}
     - target: {fileID: 1091400585635148831, guid: 18d6b9e3fd78b429cb0e77ee62059be1,
         type: 3}
       propertyPath: m_Name
@@ -4109,6 +4120,11 @@ PrefabInstance:
       propertyPath: panel3
       value: 
       objectReference: {fileID: 871480160}
+    - target: {fileID: 7813378670334108607, guid: 0fe76489a61e3584b96e8d768befdc2a,
+        type: 3}
+      propertyPath: LevelComplete
+      value: 
+      objectReference: {fileID: 158344470}
     - target: {fileID: 7813378670334108607, guid: 0fe76489a61e3584b96e8d768befdc2a,
         type: 3}
       propertyPath: QnA.Array.size
@@ -6733,7 +6749,7 @@ PrefabInstance:
     - target: {fileID: 5598829150420959195, guid: d146b74e069de8c49b6a5c56877e5de6,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 1.45
+      value: 1.55
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d146b74e069de8c49b6a5c56877e5de6, type: 3}
