@@ -105,5 +105,20 @@ public class GameManager : MonoBehaviour
 
 
     }
-    
+    public void EnableQandA()
+    {
+        foreach (GameObject item in options)
+        {
+            item.SetActive(true);
+        }
+        generateQuestion();
+    }
+
+    public void DisableQandA()
+    {
+        foreach (GameObject item in options)
+        {
+            item.SetActive(false);
+        }
+    }
 }
