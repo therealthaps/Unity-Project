@@ -34,14 +34,13 @@ public class GameManager : MonoBehaviour
     public GameObject[] options;
     public int currentQuestion;
     private GameObject[] impEffs;
+    public EnemySpawner es;
 
     public Text QuestionTxt;
     public GameObject panel1;
     public GameObject panel2;
     public void Start()
-    {
-        generateQuestion();
-    }
+    {}
     public void Update()
     {
         impEffs = GameObject.FindGameObjectsWithTag("Impact");
@@ -52,7 +51,8 @@ public class GameManager : MonoBehaviour
     }
     public void correct()
     {
-
+        panel2.SetActive(false);
+        panel1.SetActive(false);
         panel1.SetActive(true);
         if (panel1.activeSelf == true)
         {
@@ -62,12 +62,13 @@ public class GameManager : MonoBehaviour
 
         ScoringSystem.Correct();
         QnA.RemoveAt(currentQuestion);
-        generateQuestion();
-
+        es.ToggleQuestTime(true);
     }
 
     public void inCorrect()
     {
+        panel2.SetActive(false);
+        panel1.SetActive(false);
         panel2.SetActive(true);
         if (panel2.activeSelf == true)
         {
@@ -75,7 +76,7 @@ public class GameManager : MonoBehaviour
         }
         ScoringSystem.Incorrect();
         QnA.RemoveAt(currentQuestion);
-        generateQuestion();
+        es.ToggleQuestTime(true);
     }
 
     void SetAnswers()
@@ -94,7 +95,7 @@ public class GameManager : MonoBehaviour
 
     void generateQuestion()
     {
-        currentQuestion = 0;
+        currentQuestion = Random.Range(0, QnA.Count);
 
         QuestionTxt.text = QnA[currentQuestion].question;
         SetAnswers();
@@ -102,5 +103,20 @@ public class GameManager : MonoBehaviour
 
 
     }
-    
+    public void EnableQandA()
+    {
+        foreach (GameObject item in options)
+        {
+            item.SetActive(true);
+        }
+        generateQuestion();
+    }
+
+    public void DisableQandA()
+    {
+        foreach (GameObject item in options)
+        {
+            item.SetActive(false);
+        }
+    }
 }

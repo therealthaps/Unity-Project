@@ -39,16 +39,16 @@ public class Player_sprite: MonoBehaviour
         
         // if player position on y is greater than 0
         //y position=0
-        // else if position on y is less than -3.8f
+        // else if position on y is less than -3.0f
         
 
-        if (transform.position.x <= -7.79f)
+        if (transform.position.x <= -2.8f)
         {
-            transform.position = new Vector3(-7.79f, transform.position.y, 0);
+            transform.position = new Vector3(-2.8f, transform.position.y, 0);
         }
-        else if (transform.position.x >= 2.16f)
+        else if (transform.position.x >= 9.0f)
         {
-            transform.position = new Vector3(2.15f, transform.position.y, 0);
+            transform.position = new Vector3(9.0f, transform.position.y, 0);
         }
     }
 

@@ -1,0 +1,14 @@
+ManifestFileVersion: 0
+<<<<<<< HEAD
+CRC: 1472390449
+=======
+CRC: 497064551
+>>>>>>> 41bcdf094ed8b13042f4ce0fc77b1e007d484fa6
+AssetBundleManifest:
+  AssetBundleInfos:
+    Info_0:
+      Name: rikrrage
+      Dependencies: {}
+    Info_1:
+      Name: rikrpoison
+      Dependencies: {}
