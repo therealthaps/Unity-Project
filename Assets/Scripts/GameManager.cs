@@ -32,17 +32,15 @@ public class GameManager : MonoBehaviour
 
     public List<Question> QnA;
     public GameObject[] options;
-    public int currentQuestion = 0;
+    public int currentQuestion;
     private GameObject[] impEffs;
-    public GameObject timer;
-    private List<int> used;
 
     public Text QuestionTxt;
     public GameObject panel1;
     public GameObject panel2;
-    public EnemySpawner es;
     public void Start()
     {
+        generateQuestion();
     }
     public void Update()
     {
@@ -52,7 +50,6 @@ public class GameManager : MonoBehaviour
             g.SetActive(false);
         }
     }
-
     public void correct()
     {
         panel2.SetActive(false);
@@ -61,29 +58,15 @@ public class GameManager : MonoBehaviour
         if (panel1.activeSelf == true)
         {
             panel2.SetActive(false);
-
+            
         }
 
         ScoringSystem.Correct();
         QnA.RemoveAt(currentQuestion);
-        es.ToggleQuestTime(true);
+        generateQuestion();
+
     }
 
-    public void EnableQandA()
-    {
-        foreach (GameObject item in options)
-        {
-            item.SetActive(true);
-        }
-        generateQuestion();
-    }
-    public void DisableQandA()
-    {
-        foreach (GameObject item in options)
-        {
-            item.SetActive(false);
-        }
-    }
     public void inCorrect()
     {
         panel2.SetActive(false);
@@ -95,7 +78,7 @@ public class GameManager : MonoBehaviour
         }
         ScoringSystem.Incorrect();
         QnA.RemoveAt(currentQuestion);
-        es.ToggleQuestTime(true);
+        generateQuestion();
     }
 
     void SetAnswers()
@@ -112,22 +95,15 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void generateQuestion()
+    void generateQuestion()
     {
+        currentQuestion = Random.Range(0, QnA.Count);
 
         QuestionTxt.text = QnA[currentQuestion].question;
         SetAnswers();
-        timer.SetActive(true);
-        used.Add(currentQuestion);
-        if (used.Count < QnA.Count)
-            currentQuestion = get_rand();
+
+
 
     }
-
-    private int get_rand()
-    {
-        int a = Random.Range(0, 39);
-        return used.IndexOf(a) != -1 ? a : get_rand();
-    }
-
+    
 }
