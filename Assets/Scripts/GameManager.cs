@@ -39,6 +39,7 @@ public class GameManager : MonoBehaviour
     public Text QuestionTxt;
     public GameObject panel1;
     public GameObject panel2;
+    public Glow[] glows;
     public void Start()
     {}
     public void Update()
@@ -66,6 +67,9 @@ public class GameManager : MonoBehaviour
 
         ScoringSystem.Correct();
         QnA.RemoveAt(currentQuestion);
+        foreach (Glow g in glows) {
+            g.GlowG();
+        }
         es.ToggleQuestTime(true);
     }
 
@@ -80,6 +84,9 @@ public class GameManager : MonoBehaviour
         }
         ScoringSystem.Incorrect();
         QnA.RemoveAt(currentQuestion);
+        foreach(Glow g in glows) {
+            g.GlowG();
+        }
         es.ToggleQuestTime(true);
     }
 
