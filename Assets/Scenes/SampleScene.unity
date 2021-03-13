@@ -3259,31 +3259,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 1631724958}
-    - target: {fileID: 1374479570273757968, guid: c121e2c0d9776644b875c9790bc1168a,
-        type: 3}
-      propertyPath: m_Color.a
-      value: 0.68235296
-      objectReference: {fileID: 0}
-    - target: {fileID: 1374479570273757968, guid: c121e2c0d9776644b875c9790bc1168a,
-        type: 3}
-      propertyPath: m_Color.b
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1374479570273757968, guid: c121e2c0d9776644b875c9790bc1168a,
-        type: 3}
-      propertyPath: m_Color.g
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1374479570273757968, guid: c121e2c0d9776644b875c9790bc1168a,
-        type: 3}
-      propertyPath: m_Color.r
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1374479570273757968, guid: c121e2c0d9776644b875c9790bc1168a,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2654038156704894505, guid: c121e2c0d9776644b875c9790bc1168a,
         type: 3}
       propertyPath: m_TargetGraphic
@@ -3668,13 +3643,15 @@ PrefabInstance:
       value: 'Which of these is necessary to specify at time of array initialization?
 
 
-        A: Row
+        A:
+        Row
 
         B: Column
 
         C: Both Row and Column
 
-        D: None of the mentioned
+        D: None of
+        the mentioned
 
 '
       objectReference: {fileID: 0}
